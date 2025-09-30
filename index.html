@@ -807,6 +807,14 @@ ul.unstyled.tips-and-tricks{grid-template-columns:repeat(auto-fit,minmax(220px,1
 @media (min-width: 993px) {
 ul.unstyled.tips-and-tricks{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
 }
+.auto-move{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;margin:20px auto;font-size:16px;font-weight:600;color:#776e65}
+.auto-move button{background:#8f7a66;color:#f9f6f2;border:none;border-radius:6px;padding:8px 14px;font-size:15px;font-weight:700;cursor:pointer;transition:all .2s ease-in-out;flex:1 1 auto;min-width:90px;text-align:center}
+.auto-move button:hover{background:#9c8571;transform:translateY(-2px);box-shadow:0 3px 6px #0003}
+.auto-move button:active{transform:translateY(0);box-shadow:none}
+@media (max-width: 520px) {
+.auto-move{flex-direction:column;gap:10px;font-size:14px}
+.auto-move button{width:100%;font-size:14px;padding:10px}
+}
   </style>
 </head>
 <body>
@@ -968,7 +976,7 @@ ul.unstyled.tips-and-tricks{grid-template-columns:repeat(auto-fit,minmax(180px,1
         <div class="tile-container"></div>
     </div>
     <hr>
-    <p>
+    <p class="auto-move">
       Auto move:
       <button name="automove" type="button" onclick="doMovementPattern(corner);">Corner</button>
       <button name="automove" type="button" onclick="doMovementPattern(swing);">Swing</button>
